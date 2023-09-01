@@ -36,7 +36,10 @@ the interaction between the server and client. This is where the real mechanism 
 for the Application layer protocol lies, it is named DFP_CONSTS because the protocol
 controlling the interaction is named DFP from my side as I thought what is better than just
 taking the acronym for Digital forum protocol as the formal name for the protocol.
-Server - The server on the other hand also has four files under its directory which are named as
+
+**Server**
+
+The server on the other hand also has four files under its directory which are named as
 server.py, server_manager.py, server_process_commands.py and DFP_CONSTS.py. Each of the files
 at the server end does the similar jobs just as their client counterparts, so the explanations defined
 above also satisfies for the server just switch over the roles for clients with server for each of the files
