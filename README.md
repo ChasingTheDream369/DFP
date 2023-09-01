@@ -1,5 +1,7 @@
 # DFP (DIGITAL FORUM PROTOCOL)
 
+## Summary
+
 • A multi-threaded implementation of an application-level protocol that controls the flow of basic application-level commands
 for a digital forum using the general socket programming in Python.
 
@@ -7,6 +9,8 @@ for a digital forum using the general socket programming in Python.
 a sustainable codebase. Used TCP-like authentication process by creating tokens in DFP_CONSTS.py. Also supported
 uploading and deleting files for multiple users and created a heartbeat packet thread implementation for Exit and shutdown
 of the server.
+
+## Code Overview
 
 The entire code was divided into two major directories/folders and had four files each, each of them corresponding to similar feature/functionality in both the ends. The files in each directories were as follows-
 
@@ -45,7 +49,7 @@ that are needed for both the end systems to work, please make sure that while ru
 DFP_CONSTS.py is available under both the directories.(my submission has it available in both the
 directories) otherwise one of the executables will not work properly.
 
-**APPLICATION LAYER MESSAGE FORMAT**
+## Application layer Message format
 
 For the purpose of communication between the server and client, I have majorly used string constants,
 all of which are defined in the file DFP_CONSTS.py they use the mixture of concepts related to
@@ -73,7 +77,7 @@ command starts when the client sends the server PROCESS_COMMAND where the specif
 for the command is called and again the similar type of interaction happens between the client and
 server.
 
-**BRIEF DESCRIPTION OF HOW SYSTEM WORKS**
+## System Internals
 
 The system interaction begins off by firstly starting the server by writing-
 Server.py <Server_Port> <admin_password> which creates the server object and starts waiting for the
@@ -103,7 +107,7 @@ users which is the list of sockets to whom server is sending the ‘I am alive m
 commands also handles the error handling using the MESSAGE FORMAT described above and sends
 specific messages if something fails and then client responds according to it.
 
-**DESIGN TRADE-OFFS MADE AND CONSIDERED**
+## Design Trade Offs
 
 The major design trade off considered for this program was to use multithreading for all the individual
 client sockets and also for the sockets received for the parallel I am alive thread. In addition to using
@@ -120,7 +124,7 @@ of json and Constant strings. For every command execution function I firstly go 
 error and exception handling and then execution of function with the SERVER_STATE updation and
 then sending the client with the Success message.
 
-**POSSIBLE IMPROVEMENTS AND EXTENSIONS TO YOUR PROGRAM AND INDICATE HOW YOU COULD REALISE THEM**
+## Possible Improvements
 
 For the major part of the project I was pretty happy with the outcome that I got but I would definitely
 like to improve certain things with my project one of them being using string constants for application
