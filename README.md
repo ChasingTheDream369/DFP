@@ -98,8 +98,8 @@ message to the other server socket which is always listening on the <Server IP >
 So, the begin() method of each class is called to initialise these sockets and then create a separate
 threads for managing the request response by moving to the manage client function and a separate
 thread for managing the alive responses in the alive_handling thread. When it reaches the manage
-client thread it begins off by authenticating and then follows this set of methods- authentication-
->forum_interaction->command_exec_funcs which gets the command process the commands through
+client thread it begins off by authenticating and then follows this set of methods- authentication then forum_interaction 
+and then command_exec_funcs which gets the command process the commands through
 their independent function and also maintains the state through the SERVER_STATE dictionary
 which has all the states of Threads and files uploaded in their specefic list of dictionaries of threads
 and files on the other hand with the clients, the steps of execution of the functions is quite similar its
