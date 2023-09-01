@@ -22,9 +22,8 @@ checking for the command line arguments and then creates a Client class followed
 beginning the interaction with the server using the begin method of the class.
 
 • client_manger.py – This is basically the file with the implementation of Client class which
-starts off by beginning the interaction with the server and then goes off to authentication-
->forum_interaction->command_exec_funcs all of which are embedded as functions within
-the class.
+starts off by beginning the interaction with the server and then goes off to authentication then forum_interaction 
+and then command_exec_funcs all of which are embedded as functions within the class.
 
 • client_process_commands.py – It is a file where all the responses to the given commands are
 handled. It has different functions for each command which handles variety of responses from
