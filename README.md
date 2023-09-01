@@ -16,20 +16,20 @@ The entire code was divided into two major directories/folders and had four file
 
 **Client**
 
-• client.py – Main file used for instantiating the interaction between the client and server uses
+• **client.py** – Main file used for instantiating the interaction between the client and server uses
 <Server IP> <Server Port> as command line arguments. The file just does a basic error
 checking for the command line arguments and then creates a Client class followed by
 beginning the interaction with the server using the begin method of the class.
 
-• client_manger.py – This is basically the file with the implementation of Client class which
+• **client_manager.py** – This is basically the file with the implementation of Client class which
 starts off by beginning the interaction with the server and then goes off to authentication then forum_interaction 
 and then command_exec_funcs all of which are embedded as functions within the class.
 
-• client_process_commands.py – It is a file where all the responses to the given commands are
+• **client_process_commands.py** – It is a file where all the responses to the given commands are
 handled. It has different functions for each command which handles variety of responses from
 the server and tells the client of the response on the terminal.
 
-• DFP_CONSTS.py - This is a special file which will be present at both the client and server
+• **DFP_CONSTS.py** - This is a special file which will be present at both the client and server
 directory. It consists of all the constant string values and other related constants required for
 the interaction between the server and client. This is where the real mechanism and constants
 for the Application layer protocol lies, it is named DFP_CONSTS because the protocol
